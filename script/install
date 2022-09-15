@@ -1,0 +1,8 @@
+#!/bin/bash
+# Using Ubuntu
+sudo apt update && sudo apt install build-essential
+
+#Removing build-essential tool from Ubuntu
+
+# sudo apt remove build-essential
+# sudo apt autoremove

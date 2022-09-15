@@ -1,0 +1,25 @@
+#!/bin/bash
+# Using Ubuntu
+sudo apt install unzip
+
+wget https://hub.fastgit.xyz/ninja-build/ninja/releases/download/v1.10.2/ninja-linux.zip
+
+mkdir -p $HOME/local/bin
+unzip ninja-linux.zip -d $HOME/local/bin
+
+mkdir -p $HOME/tools/ && cd $HOME/tools
+git clone --depth=1 https://hub.fastgit.xyz/sumneko/lua-language-server
+
+cd lua-language-server
+# if the cloning speed is too slow, edit .gitmodules and replace github.com
+# with hub.fastgit.org, which should be faster than github.
+git submodule update --init --recursive
+
+# build on Linux
+cd 3rd/luamake
+compile/install.sh
+cd ../..
+./3rd/luamake/luamake rebuild
+
+# For Linux
+# export PATH="$HOME/tools/lua-language-server/bin/Linux:$PATH"
