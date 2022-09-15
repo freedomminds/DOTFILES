@@ -1,33 +1,29 @@
-# DOTFILES
+### Cara Install rcm di UBUNTU / Debian
 
-## Cara mengunakan rcm / thoughbot
-
-### Cara Install rcm di UBUNTU / Debian 
-
-```
+```bash
 sudo apt install rcm
 ```
 
 Cara Memasukan file ke dotfiles
 
-``mkrc .vimrc
+```bash
+mkrc .vimrc
 ```
 
 untuk mengecek sebuah file yang suda di link ke dotfile
 
-```
+```bash
 ls -al
-
 ```
-atau 
 
-```
+atau
+
+```bash
 lsrc
-
 ```
 
 Cara agar configurasi kita bisa kita gunakan lagi
 
-```
+```bash
 rcup
 ```
