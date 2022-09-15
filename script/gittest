@@ -2,5 +2,6 @@
 # Using Ubuntu
 
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/Labs
+# ssh-add ~/.ssh/Labs
+ssh-add ~/.ssh/freedominds
 ssh -T git@github.com
